@@ -309,6 +309,7 @@ button { font: inherit; }
 @media (max-width: 960px) {
   .B-nav { padding: 0 16px; }
   .B-nav .burger { display: grid; }
+  .B-nav .right { justify-self: end; }
   .B-nav nav {
     display: none;
     position: absolute; top: 100%; left: 0; right: 0;
