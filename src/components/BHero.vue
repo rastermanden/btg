@@ -45,7 +45,7 @@ const go = (path) => router.push(path)
 
   <div v-else class="B-hero layout-poster">
     <div class="poster-col">
-      <div class="sticker s1">MIKKEL<br>TAKES<br>THE SHORTS!</div>
+      <div class="sticker s1">TROELS<br>TAKES<br>THE SHORTS!</div>
       <img :src="posterUrl" alt="BTG 2026 Poster" />
       <div class="sticker s2" style="background: var(--B-gold); color: var(--B-navy);">EDITION<br>XV</div>
       <div class="sticker s3">CHAMPION<br>MMXXVI</div>
@@ -54,15 +54,15 @@ const go = (path) => router.push(path)
       <div>
         <div class="eyebrow">MMXXVI · Edition XV · Champion declared</div>
         <h1>
-          MIKKEL <span class="pink">SLICEFINGER</span>
+          TROELS <span class="pink">SMASHMOSE</span>
           <span class="script">wins the Golden Gummiben.</span>
-          Fourth pair of pink.
+          Sixth pair of pink.
         </h1>
-        <p class="lead">Closed out the fifteenth edition on a feathered drop-shot lob from the deuce court. Dylan on the lips, chalk on the line, Kasper's face on the ground.</p>
+        <p class="lead">Closed the fifteenth edition with a deuce-court forehand that cracked a net post on match point. Dolph-quiet through the trophy ceremony. The only man at Klint with six.</p>
         <div class="meta-row">
           <span>24—25 April 2026</span><span class="dot"></span>
           <span>Klint, DK</span><span class="dot"></span>
-          <span>Champion · Slicefinger</span>
+          <span>Champion · Smashmose</span>
         </div>
         <div class="ctas">
           <button class="btn pink" type="button" @click="go('/history')">Read the Register</button>

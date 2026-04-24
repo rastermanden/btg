@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import BHero from '../components/BHero.vue'
+import { winnerPhotoUrl } from '../data.js'
 
 const heroLayout = ref('poster')
 
@@ -33,23 +34,27 @@ const scorecard = [
     <div class="B-section-head" style="margin-bottom: 28px;">
       <div>
         <h2 style="color: var(--B-navy);">CHAMPION<br><span style="color: var(--B-pink);">MMXXVI.</span></h2>
-        <div class="sub" style="color: var(--B-navy);">Fifteenth edition. Fourth pair of pink for the Dylan of Klint.</div>
+        <div class="sub" style="color: var(--B-navy);">Fifteenth edition. Sixth pair of pink for the Dolph of Klint.</div>
       </div>
       <div class="n" style="background: var(--B-navy); color: var(--B-gold);">§ 00</div>
     </div>
     <div class="grid">
       <div class="stamp">CHAMPION<span>MMXXVI</span></div>
       <div>
-        <div class="nick">“The Drop Shot”</div>
-        <div class="bigname">MIKKEL<br><span class="pink">SLICEFINGER</span></div>
-        <p class="copy">Closed out the Golden Gummiben with a feathered lob on match point, scraped the baseline, lifted the shorts for the fourth time in fifteen editions. Kasper has been seen staring at the 18th green since Friday.</p>
+        <div class="nick">“Deuce Daddy”</div>
+        <div class="bigname">TROELS<br><span class="pink">SMASHMOSE</span></div>
+        <p class="copy">Closed the Golden Gummiben with a deuce-court forehand that cracked a net post on match point. Lifted the shorts for the sixth time in fifteen editions. Said two sentences at the ceremony. The rest of the field has been quiet since.</p>
         <div class="chips">
           <span class="chip pink">−8 on the card</span>
           <span class="chip">6-4 · 6-3</span>
           <span class="chip pink">20.0 BTG pts</span>
-          <span class="chip">Pair N°4</span>
+          <span class="chip">Pair N°6</span>
         </div>
       </div>
+      <figure class="photo-frame">
+        <img :src="winnerPhotoUrl" alt="Troels Smashmose in the Pink Shorts, post-final at Klint" />
+        <figcaption>Troels &amp; the Pink · Post-final, Klint MMXXVI</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -72,12 +77,12 @@ const scorecard = [
 
   <section class="B-feature">
     <div class="scroll">
-      <span>MIKKEL WINS.</span><span class="pink">DROP-SHOT.</span><span>WEAR THE SHORTS.</span>
+      <span>TROELS WINS.</span><span class="pink">DEUCE DADDY.</span><span>WEAR THE SHORTS.</span>
       <span style="color: var(--B-turf);">★</span>
-      <span>MIKKEL WINS.</span><span class="pink">MMXXVI.</span>
-      <span>MIKKEL WINS.</span><span class="pink">DROP-SHOT.</span><span>WEAR THE SHORTS.</span>
+      <span>TROELS WINS.</span><span class="pink">MMXXVI.</span>
+      <span>TROELS WINS.</span><span class="pink">DEUCE DADDY.</span><span>WEAR THE SHORTS.</span>
       <span style="color: var(--B-turf);">★</span>
-      <span>MIKKEL WINS.</span><span class="pink">MMXXVI.</span>
+      <span>TROELS WINS.</span><span class="pink">MMXXVI.</span>
     </div>
   </section>
 
@@ -91,10 +96,10 @@ const scorecard = [
     </div>
     <div class="B-shorts-holder">
       <div>
-        <div class="nick">“The Drop Shot”</div>
-        <div class="bigname">MIKKEL<br><span class="pink">SLICEFINGER</span></div>
+        <div class="nick">“Deuce Daddy”</div>
+        <div class="bigname">TROELS<br><span class="pink">SMASHMOSE</span></div>
         <p class="copy">
-          Took the 2026 edition with a feathered drop-shot lob on match point, his fourth pair of pink shorts in fifteen editions. Hummed Dylan between every hole. The shorts are said to fit, but only just.
+          Took the 2026 edition with a deuce-court forehand that cracked a net post on match point, his sixth pair of pink shorts in fifteen editions. Said two sentences at the ceremony. The shorts fit. They always fit.
         </p>
       </div>
       <div class="card-bg">

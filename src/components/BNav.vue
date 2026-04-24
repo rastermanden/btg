@@ -11,11 +11,11 @@ const items = [
 ]
 
 const tickerItems = [
-  'Champion MMXXVI · Mikkel Slicefinger',
-  'Drop-shot on match point',
-  'Pair N°4 · Pink & Correct',
-  'Dylan on the 18th fairway',
-  'Kasper: still staring at the green',
+  'Champion MMXXVI · Troels Smashmose',
+  'Deuce-court forehand · net post cracked',
+  'Pair N°6 · Pink & Correct',
+  'Dolph-quiet through the ceremony',
+  'The rest of the field: still quiet',
 ]
 
 const isOpen = ref(false)

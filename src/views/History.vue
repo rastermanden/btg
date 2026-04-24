@@ -2,8 +2,8 @@
 import { BTG_DATA } from '../data.js'
 
 const wins = [
-  ['MIKKEL SLICEFINGER', 3],
-  ['TROELS SMASHMOSE', 3],
+  ['TROELS SMASHMOSE', 4],
+  ['MIKKEL SLICEFINGER', 2],
   ['KASPER GUMMIBEN', 2],
 ]
 </script>
