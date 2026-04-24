@@ -125,6 +125,14 @@ button { font: inherit; }
 }
 .B-hero.layout-poster .sticker.s1 { top: 28px; right: 40px; transform: rotate(8deg); }
 .B-hero.layout-poster .sticker.s2 { bottom: 50px; left: 20px; }
+.B-hero.layout-poster .sticker.s3 {
+  top: 50%; right: 14px;
+  background: var(--B-gold); color: var(--B-navy);
+  font-size: 20px; padding: 16px 18px;
+  transform: translateY(-50%) rotate(-10deg);
+  border-color: var(--B-navy);
+  box-shadow: 6px 6px 0 var(--B-pink);
+}
 
 .B-hero .copy-col { padding: 54px 46px; background: var(--B-bg); position: relative; display: flex; flex-direction: column; justify-content: space-between; }
 .B-hero .copy-col::before {
@@ -225,6 +233,73 @@ button { font: inherit; }
 .B-shorts-holder .card-bg td.k { font-family: 'Oswald'; font-size: 11px; letter-spacing: .14em; color: var(--B-navy); }
 .B-shorts-holder .card-bg td.v { font-family: 'Bowlby One'; font-size: 20px; color: #fff; text-align: right; }
 
+/* §00 CHAMPION band (Home) */
+.B-champion {
+  position: relative;
+  padding: clamp(40px, 6vw, 64px) clamp(20px, 4vw, 48px);
+  background: linear-gradient(180deg, var(--B-gold) 0%, #c08a1f 100%);
+  color: var(--B-navy);
+  border-top: 6px solid var(--B-navy);
+  border-bottom: 6px solid var(--B-navy);
+  overflow: hidden;
+}
+.B-champion::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(45deg, rgba(14,26,51,.08) 0 2px, transparent 2px 18px);
+}
+.B-champion > * { position: relative; z-index: 1; }
+.B-champion .grid { display: grid; grid-template-columns: auto 1fr auto; gap: clamp(24px, 4vw, 48px); align-items: center; }
+.B-champion .photo-frame {
+  margin: 0; background: #fff;
+  border: 5px solid var(--B-navy);
+  padding: 10px 10px 14px;
+  box-shadow: 10px 10px 0 var(--B-pink);
+  transform: rotate(2deg);
+  width: clamp(200px, 22vw, 280px);
+}
+.B-champion .photo-frame img {
+  display: block; width: 100%;
+  aspect-ratio: 3 / 4; object-fit: cover;
+  background: var(--B-cream);
+}
+.B-champion .photo-frame figcaption {
+  font-family: 'Playfair Display'; font-style: italic;
+  font-size: 12px; line-height: 1.35; color: var(--B-navy);
+  text-align: center; margin-top: 10px;
+}
+.B-champion .stamp {
+  background: var(--B-pink); color: #fff; border: 5px solid var(--B-navy);
+  padding: 26px 30px; text-align: center; transform: rotate(-4deg);
+  font-family: 'Bowlby One'; text-transform: uppercase; line-height: .9;
+  font-size: clamp(34px, 6vw, 56px); letter-spacing: .02em;
+  box-shadow: 10px 10px 0 var(--B-navy);
+}
+.B-champion .stamp span {
+  display: block; margin-top: 8px;
+  font-size: clamp(16px, 2.4vw, 22px); color: var(--B-gold);
+  -webkit-text-stroke: 1px var(--B-navy);
+}
+.B-champion .nick { font-family: 'Playfair Display'; font-style: italic; font-size: clamp(18px, 2.6vw, 26px); color: var(--B-pink-deep); }
+.B-champion .bigname {
+  font-family: 'Bowlby One'; font-size: clamp(44px, 9vw, 88px);
+  line-height: .9; margin: 6px 0 14px;
+  color: var(--B-navy); text-transform: uppercase; letter-spacing: -.01em;
+}
+.B-champion .bigname .pink { color: var(--B-pink); }
+.B-champion .copy { font-family: 'Playfair Display'; font-style: italic; font-size: clamp(16px, 2.2vw, 20px); line-height: 1.45; max-width: 560px; }
+.B-champion .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.B-champion .chip {
+  font-family: 'Bowlby One'; font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+  background: var(--B-navy); color: var(--B-gold); padding: 8px 12px;
+  border: 2px solid var(--B-navy);
+}
+.B-champion .chip.pink { background: var(--B-pink); color: #fff; }
+@media (max-width: 960px) {
+  .B-champion .grid { grid-template-columns: 1fr; justify-items: start; }
+  .B-champion .stamp { transform: rotate(-3deg); box-shadow: 6px 6px 0 var(--B-navy); padding: 18px 22px; }
+  .B-champion .photo-frame { transform: rotate(-2deg); width: min(220px, 70vw); box-shadow: 6px 6px 0 var(--B-pink); }
+}
+
 /* about */
 .B-about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; }
 .B-about-grid .lead-quote { font-family: 'Playfair Display'; font-style: italic; font-size: 22px; line-height: 1.4; color: var(--B-navy); }
@@ -248,11 +323,19 @@ button { font: inherit; }
 .B-table tbody td { padding: 16px 14px; border-bottom: 2px solid var(--B-navy); vertical-align: middle; }
 .B-table tbody tr:last-child td { border-bottom: 0; }
 .B-table tbody tr:nth-child(even) { background: rgba(239,58,138,.06); }
+.B-table tbody tr.champion-row,
+.B-table tbody tr.champion-row:nth-child(even) {
+  background: linear-gradient(90deg, rgba(216,166,58,.35), rgba(239,58,138,.18));
+  box-shadow: inset 5px 0 0 var(--B-pink);
+}
+.B-table tbody tr.champion-row .champ { font-family: 'Bowlby One'; color: var(--B-pink-deep); letter-spacing: .02em; }
+.B-table tbody tr.champion-row .year { color: var(--B-pink-deep); }
 .B-table .year { font-family: 'Bowlby One'; font-size: 22px; color: var(--B-pink); }
 .B-table .champ { font-weight: 700; }
 .B-table .mono-cell { font-family: 'JetBrains Mono'; font-size: 12px; }
 .B-table .note-cell { max-width: 320px; }
 .B-table .shorts-tag { display: inline-block; font-family: 'Bowlby One'; font-size: 10px; padding: 4px 8px; background: var(--B-pink); color: #fff; text-transform: uppercase; border: 2px solid var(--B-navy); }
+.B-table .shorts-tag.gold { background: var(--B-gold); color: var(--B-navy); }
 
 .B-wins { margin-top: 30px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .B-wins .p-card h3 { font-size: 20px; }
@@ -284,6 +367,23 @@ button { font: inherit; }
   margin-top: 14px; font-family: 'Bowlby One'; font-size: 10px;
   background: var(--B-pink); color: #fff; display: inline-block;
   padding: 5px 9px; border: 2px solid var(--B-navy); text-transform: uppercase;
+}
+.B-players .card.champion {
+  box-shadow: 6px 6px 0 var(--B-pink), 12px 12px 0 var(--B-gold);
+  border-color: var(--B-pink);
+}
+.B-players .card.champion .no { color: var(--B-pink); }
+.B-players .card .champ-ribbon {
+  position: absolute; top: -14px; left: -14px;
+  background: var(--B-gold); color: var(--B-navy);
+  font-family: 'Bowlby One'; font-size: 11px; letter-spacing: .08em;
+  padding: 8px 12px; border: 3px solid var(--B-navy);
+  transform: rotate(-6deg); text-transform: uppercase;
+  box-shadow: 4px 4px 0 var(--B-navy); z-index: 2;
+}
+.B-players .card .shorts-tag.gold { background: var(--B-gold); color: var(--B-navy); }
+@media (max-width: 960px) {
+  .B-players .card.champion { box-shadow: 4px 4px 0 var(--B-pink), 8px 8px 0 var(--B-gold); }
 }
 
 /* rules — charter style */

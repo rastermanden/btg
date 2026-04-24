@@ -4,6 +4,7 @@ import { BTG_DATA } from '../data.js'
 const pad2 = (n) => String(n).padStart(2, '0')
 const shortsYear = (y) => String(y).slice(2)
 const imgUrl = (path) => `${import.meta.env.BASE_URL}${path}`
+const isChampion = (p) => p.shorts === BTG_DATA.year
 </script>
 
 <template>
@@ -20,8 +21,9 @@ const imgUrl = (path) => `${import.meta.env.BASE_URL}${path}`
         v-for="p in BTG_DATA.players"
         :key="p.no"
         class="card"
-        :class="{ shorts: !!p.shorts }"
+        :class="{ shorts: !!p.shorts, champion: isChampion(p) }"
       >
+        <div v-if="isChampion(p)" class="champ-ribbon">Champion MMXXVI</div>
         <div class="no">{{ pad2(p.no) }}</div>
         <div class="portrait">
           <img
@@ -38,7 +40,7 @@ const imgUrl = (path) => `${import.meta.env.BASE_URL}${path}`
           <div><div class="k">SERVE</div><div class="v">{{ p.serve }}</div></div>
           <div><div class="k">WINS</div><div class="v">{{ p.wins }}</div></div>
         </div>
-        <div v-if="p.shorts" class="shorts-tag">
+        <div v-if="p.shorts" class="shorts-tag" :class="{ gold: isChampion(p) }">
           Shorts ’{{ shortsYear(p.shorts) }}
         </div>
       </div>

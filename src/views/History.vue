@@ -2,7 +2,7 @@
 import { BTG_DATA } from '../data.js'
 
 const wins = [
-  ['TROELS SMASHMOSE', 3],
+  ['TROELS SMASHMOSE', 4],
   ['MIKKEL SLICEFINGER', 2],
   ['KASPER GUMMIBEN', 2],
 ]
@@ -13,7 +13,7 @@ const wins = [
     <div class="B-section-head">
       <div>
         <h2>THE PINK SHORTS<br>REGISTER.</h2>
-        <div class="sub">Nine editions. Four men. One trophy.</div>
+        <div class="sub">Ten editions. Four men. One trophy — and a new name at the top.</div>
       </div>
       <div class="n">§ HISTORY</div>
     </div>
@@ -30,13 +30,17 @@ const wins = [
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(h, i) in BTG_DATA.history" :key="h.year">
+          <tr
+            v-for="(h, i) in BTG_DATA.history"
+            :key="h.year"
+            :class="{ 'champion-row': i === 0 }"
+          >
             <td class="year">{{ h.year }}</td>
             <td class="champ">{{ h.champ }}</td>
             <td class="mono-cell">{{ h.score }}</td>
             <td>{{ h.venue }}</td>
             <td class="note-cell">{{ h.note }}</td>
-            <td><span v-if="i === 0" class="shorts-tag">Current</span></td>
+            <td><span v-if="i === 0" class="shorts-tag gold">Champion</span></td>
           </tr>
         </tbody>
       </table>

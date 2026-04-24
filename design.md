@@ -31,7 +31,7 @@ Five routes, matching the prototype nav:
 2. `/about` — origin story, The Council roster, facilities cards.
 3. `/rules` — seven-article charter with sticky sidebar index + commentary pull-quote.
 4. `/players` — five player cards, reigning Shorts-Holder highlighted in pink.
-5. `/history` — Pink Shorts Register table (2017 → 2025) + wins tally cards.
+5. `/history` — Pink Shorts Register table (2017 → 2026) + wins tally cards; the current champion row gets a gold highlight.
 
 ## Component layout
 
