@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import BHero from '../components/BHero.vue'
+import { winnerPhotoUrl } from '../data.js'
 
 const heroLayout = ref('poster')
 
@@ -11,10 +12,10 @@ const pillars = [
 ]
 
 const scorecard = [
-  ['STROKE (18H)', '−7'],
+  ['STROKE (18H)', '−8'],
   ['SET 1', '6-4'],
   ['SET 2', '6-3'],
-  ['BTG POINTS', '19.0'],
+  ['BTG POINTS', '20.0'],
   ['AQUAVITS', '0 DECLINED'],
 ]
 </script>
@@ -28,6 +29,34 @@ const scorecard = [
     <button :class="{ active: heroLayout === 'split' }" @click="heroLayout = 'split'">Split</button>
     <button :class="{ active: heroLayout === 'countdown' }" @click="heroLayout = 'countdown'">Countdown</button>
   </div>
+
+  <section class="B-champion" aria-label="MMXXVI Champion">
+    <div class="B-section-head" style="margin-bottom: 28px;">
+      <div>
+        <h2 style="color: var(--B-navy);">CHAMPION<br><span style="color: var(--B-pink);">MMXXVI.</span></h2>
+        <div class="sub" style="color: var(--B-navy);">Fifteenth edition. Sixth pair of pink for the Dolph of Klint.</div>
+      </div>
+      <div class="n" style="background: var(--B-navy); color: var(--B-gold);">§ 00</div>
+    </div>
+    <div class="grid">
+      <div class="stamp">CHAMPION<span>MMXXVI</span></div>
+      <div>
+        <div class="nick">“Deuce Daddy”</div>
+        <div class="bigname">TROELS<br><span class="pink">SMASHMOSE</span></div>
+        <p class="copy">Closed the Golden Gummiben with a deuce-court forehand that cracked a net post on match point. Lifted the shorts for the sixth time in fifteen editions. Said two sentences at the ceremony. The rest of the field has been quiet since.</p>
+        <div class="chips">
+          <span class="chip pink">−8 on the card</span>
+          <span class="chip">6-4 · 6-3</span>
+          <span class="chip pink">20.0 BTG pts</span>
+          <span class="chip">Pair N°6</span>
+        </div>
+      </div>
+      <figure class="photo-frame">
+        <img :src="winnerPhotoUrl" alt="Troels Smashmose in the Pink Shorts, post-final at Klint" />
+        <figcaption>Troels &amp; the Pink · Post-final, Klint MMXXVI</figcaption>
+      </figure>
+    </div>
+  </section>
 
   <section class="B-section">
     <div class="B-section-head">
@@ -48,33 +77,33 @@ const scorecard = [
 
   <section class="B-feature">
     <div class="scroll">
-      <span>DRIVE IT.</span><span class="pink">RALLY IT.</span><span>WEAR THE SHORTS.</span>
+      <span>TROELS WINS.</span><span class="pink">DEUCE DADDY.</span><span>WEAR THE SHORTS.</span>
       <span style="color: var(--B-turf);">★</span>
-      <span>DRIVE IT.</span><span class="pink">RALLY IT.</span>
-      <span>DRIVE IT.</span><span class="pink">RALLY IT.</span><span>WEAR THE SHORTS.</span>
+      <span>TROELS WINS.</span><span class="pink">MMXXVI.</span>
+      <span>TROELS WINS.</span><span class="pink">DEUCE DADDY.</span><span>WEAR THE SHORTS.</span>
       <span style="color: var(--B-turf);">★</span>
-      <span>DRIVE IT.</span><span class="pink">RALLY IT.</span>
+      <span>TROELS WINS.</span><span class="pink">MMXXVI.</span>
     </div>
   </section>
 
   <section class="B-section alt">
     <div class="B-section-head">
       <div>
-        <h2 style="color: var(--B-gold);">SHORTS-HOLDER<br>OF MMXXV.</h2>
+        <h2 style="color: var(--B-gold);">SHORTS-HOLDER<br>OF MMXXVI.</h2>
         <div class="sub">Currently unbeaten. Currently pink.</div>
       </div>
       <div class="n" style="background: var(--B-pink); color: #fff;">§ 02</div>
     </div>
     <div class="B-shorts-holder">
       <div>
-        <div class="nick">“Bogey King”</div>
-        <div class="bigname">KASPER<br><span class="pink">GUMMIBEN</span></div>
+        <div class="nick">“Deuce Daddy”</div>
+        <div class="bigname">TROELS<br><span class="pink">SMASHMOSE</span></div>
         <p class="copy">
-          Sealed the 2025 edition on a sudden-death chip-in from 42 metres off the 18th. Has since legally changed his surname to match the trophy. The shorts fit. The marriage did not survive.
+          Took the 2026 edition with a deuce-court forehand that cracked a net post on match point, his sixth pair of pink shorts in fifteen editions. Said two sentences at the ceremony. The shorts fit. They always fit.
         </p>
       </div>
       <div class="card-bg">
-        <div class="label">FINAL SCORECARD · MMXXV</div>
+        <div class="label">FINAL SCORECARD · MMXXVI</div>
         <table>
           <tbody>
             <tr v-for="[k, v] in scorecard" :key="k">
