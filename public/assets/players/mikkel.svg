@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" role="img" aria-label="Mikkel as Bob Dylan">
+  <rect width="200" height="220" fill="#ffe9d1"/>
+  <!-- Shoulders / jacket -->
+  <path d="M15 220 L15 200 Q50 175 80 172 L120 172 Q150 175 185 200 L185 220 Z" fill="#0e1a33" stroke="#0e1a33" stroke-width="3"/>
+  <!-- Shirt collar V -->
+  <path d="M82 172 L100 195 L118 172 Z" fill="#fff3e6" stroke="#0e1a33" stroke-width="2.5"/>
+  <!-- Neck -->
+  <rect x="86" y="152" width="28" height="22" fill="#e8b890" stroke="#0e1a33" stroke-width="3"/>
+  <!-- Face -->
+  <ellipse cx="100" cy="118" rx="42" ry="48" fill="#f3c79e" stroke="#0e1a33" stroke-width="3"/>
+  <!-- Curly halo hair (Dylan's signature) -->
+  <g fill="#3a2210" stroke="#0e1a33" stroke-width="2.5">
+    <circle cx="58" cy="100" r="14"/>
+    <circle cx="64" cy="78" r="13"/>
+    <circle cx="82" cy="64" r="14"/>
+    <circle cx="100" cy="58" r="14"/>
+    <circle cx="118" cy="62" r="13"/>
+    <circle cx="136" cy="72" r="13"/>
+    <circle cx="144" cy="94" r="13"/>
+    <circle cx="148" cy="114" r="11"/>
+    <circle cx="54" cy="120" r="11"/>
+    <!-- Sideburn hints -->
+    <circle cx="62" cy="138" r="9"/>
+    <circle cx="140" cy="138" r="9"/>
+  </g>
+  <!-- Forehead patch over hair to keep face visible -->
+  <path d="M64 108 Q100 92 138 108 L138 128 Q100 124 64 128 Z" fill="#f3c79e"/>
+  <!-- Sunglasses (round) -->
+  <circle cx="84" cy="116" r="11" fill="#0e1a33"/>
+  <circle cx="116" cy="116" r="11" fill="#0e1a33"/>
+  <line x1="95" y1="116" x2="105" y2="116" stroke="#0e1a33" stroke-width="2.5"/>
+  <circle cx="81" cy="113" r="2.5" fill="#fff" opacity=".6"/>
+  <circle cx="113" cy="113" r="2.5" fill="#fff" opacity=".6"/>
+  <!-- Nose -->
+  <path d="M100 124 Q96 136 100 142" fill="none" stroke="#0e1a33" stroke-width="2" stroke-linecap="round"/>
+  <!-- Harmonica + holder wire (neck brace) -->
+  <path d="M54 148 Q100 158 146 148" fill="none" stroke="#0e1a33" stroke-width="2.5"/>
+  <rect x="72" y="144" width="56" height="12" rx="2" fill="#d8a63a" stroke="#0e1a33" stroke-width="2.5"/>
+  <g stroke="#0e1a33" stroke-width="1">
+    <line x1="80" y1="146" x2="80" y2="154"/>
+    <line x1="88" y1="146" x2="88" y2="154"/>
+    <line x1="96" y1="146" x2="96" y2="154"/>
+    <line x1="104" y1="146" x2="104" y2="154"/>
+    <line x1="112" y1="146" x2="112" y2="154"/>
+    <line x1="120" y1="146" x2="120" y2="154"/>
+  </g>
+</svg>

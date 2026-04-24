@@ -14,11 +14,11 @@ export const BTG_DATA = {
   prize: 'The Pink Shorts',
 
   players: [
-    { no: 1, first: 'Mikkel', last: 'Slicefinger', nick: 'The Drop Shot', club: 'Klint GC', nation: 'DK', hcp: 4.2, serve: 188, wins: 3, shorts: 2024 },
-    { no: 2, first: 'Kasper', last: 'Gummiben', nick: 'Bogey King', club: 'Klint GC', nation: 'DK', hcp: 2.8, serve: 201, wins: 4, shorts: 2025 },
-    { no: 3, first: 'Uffe', last: 'Dobbelbogey', nick: 'Cold Fore', club: 'Klint GC', nation: 'DK', hcp: 6.1, serve: 176, wins: 2, shorts: 2022 },
-    { no: 4, first: 'Troels', last: 'Smashmose', nick: 'Deuce Daddy', club: 'Klint GC', nation: 'DK', hcp: 1.4, serve: 192, wins: 5, shorts: 2023 },
-    { no: 5, first: 'Martin', last: 'Pølsefod', nick: 'Chunker Supreme', club: 'Klint GC', nation: 'DK', hcp: 5.8, serve: 183, wins: 1, shorts: null },
+    { no: 1, first: 'Mikkel', last: 'Slicefinger', nick: 'The Drop Shot', club: 'Klint GC', nation: 'DK', hcp: 4.2, serve: 188, wins: 3, shorts: 2024, img: 'assets/players/mikkel.svg', persona: 'Bob Dylan' },
+    { no: 2, first: 'Kasper', last: 'Gummiben', nick: 'Bogey King', club: 'Klint GC', nation: 'DK', hcp: 2.8, serve: 201, wins: 4, shorts: 2025, img: 'assets/players/kasper.svg', persona: 'Axl Rose' },
+    { no: 3, first: 'Uffe', last: 'Dobbelbogey', nick: 'Cold Fore', club: 'Klint GC', nation: 'DK', hcp: 6.1, serve: 176, wins: 2, shorts: 2022, img: 'assets/players/uffe.svg', persona: 'Harald Blåtand' },
+    { no: 4, first: 'Troels', last: 'Smashmose', nick: 'Deuce Daddy', club: 'Klint GC', nation: 'DK', hcp: 1.4, serve: 192, wins: 5, shorts: 2023, img: 'assets/players/troels.svg', persona: 'Dolph Lundgren' },
+    { no: 5, first: 'Martin', last: 'Pølsefod', nick: 'Chunker Supreme', club: 'Klint GC', nation: 'DK', hcp: 5.8, serve: 183, wins: 1, shorts: null, img: 'assets/players/martin.svg', persona: 'Dee Snider' },
   ],
 
   history: [

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" role="img" aria-label="Martin as Dee Snider of Twisted Sister">
+  <rect width="200" height="220" fill="#ffe9d1"/>
+  <!-- Wild back hair behind shoulders -->
+  <path d="M20 220 L10 140 Q4 100 24 74 Q14 130 36 210 Z" fill="#f0d770" stroke="#0e1a33" stroke-width="3"/>
+  <path d="M180 220 L190 140 Q196 100 176 74 Q186 130 164 210 Z" fill="#f0d770" stroke="#0e1a33" stroke-width="3"/>
+  <!-- Shoulders / leather + studs -->
+  <path d="M20 220 L20 198 Q50 172 80 170 L120 170 Q150 172 180 198 L180 220 Z" fill="#0e1a33" stroke="#0e1a33" stroke-width="3"/>
+  <g fill="#d8a63a" stroke="#0e1a33" stroke-width="1">
+    <circle cx="40" cy="200" r="3"/><circle cx="56" cy="208" r="3"/><circle cx="70" cy="196" r="3"/>
+    <circle cx="130" cy="196" r="3"/><circle cx="144" cy="208" r="3"/><circle cx="160" cy="200" r="3"/>
+  </g>
+  <!-- Studded collar -->
+  <path d="M72 172 Q100 180 128 172 L128 182 Q100 192 72 182 Z" fill="#0e1a33" stroke="#0e1a33" stroke-width="2"/>
+  <g fill="#d8a63a">
+    <polygon points="80,178 84,176 84,182 80,184"/>
+    <polygon points="92,180 96,178 96,184 92,186"/>
+    <polygon points="104,180 108,178 108,184 104,186"/>
+    <polygon points="116,178 120,176 120,182 116,184"/>
+  </g>
+  <!-- Neck -->
+  <rect x="88" y="150" width="24" height="22" fill="#f3c79e" stroke="#0e1a33" stroke-width="3"/>
+  <!-- Big wild curly hair -->
+  <g fill="#f0d770" stroke="#0e1a33" stroke-width="2.5">
+    <circle cx="40" cy="90" r="20"/>
+    <circle cx="52" cy="58" r="18"/>
+    <circle cx="78" cy="40" r="18"/>
+    <circle cx="108" cy="36" r="18"/>
+    <circle cx="138" cy="44" r="18"/>
+    <circle cx="160" cy="64" r="18"/>
+    <circle cx="166" cy="92" r="18"/>
+    <circle cx="38" cy="120" r="16"/>
+    <circle cx="164" cy="120" r="16"/>
+    <circle cx="30" cy="150" r="14"/>
+    <circle cx="172" cy="150" r="14"/>
+  </g>
+  <!-- Face (front, covering hair underneath) -->
+  <ellipse cx="100" cy="116" rx="38" ry="42" fill="#f3c79e" stroke="#0e1a33" stroke-width="3"/>
+  <!-- Forehead locks -->
+  <path d="M66 90 Q72 76 90 82 Q88 94 76 100 Z" fill="#f0d770" stroke="#0e1a33" stroke-width="2"/>
+  <path d="M134 90 Q128 76 110 82 Q112 94 124 100 Z" fill="#f0d770" stroke="#0e1a33" stroke-width="2"/>
+  <!-- Black eye makeup (raccoon) -->
+  <ellipse cx="82" cy="114" rx="12" ry="8" fill="#0e1a33" opacity=".85"/>
+  <ellipse cx="118" cy="114" rx="12" ry="8" fill="#0e1a33" opacity=".85"/>
+  <!-- Eye whites + irises -->
+  <ellipse cx="82" cy="114" rx="5" ry="4" fill="#fff"/>
+  <ellipse cx="118" cy="114" rx="5" ry="4" fill="#fff"/>
+  <circle cx="82" cy="115" r="2.2" fill="#0e1a33"/>
+  <circle cx="118" cy="115" r="2.2" fill="#0e1a33"/>
+  <!-- Lightning makeup streak across one eye -->
+  <path d="M130 106 L138 112 L134 114 L142 124" fill="none" stroke="#c61d6e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Nose -->
+  <path d="M100 120 L96 134 Q100 138 104 134" fill="none" stroke="#0e1a33" stroke-width="2" stroke-linecap="round"/>
+  <!-- Pink lipstick screaming mouth -->
+  <path d="M84 146 Q100 158 116 146 Q114 152 100 154 Q86 152 84 146 Z" fill="#ef3a8a" stroke="#0e1a33" stroke-width="2"/>
+  <path d="M90 148 L110 148" stroke="#fff" stroke-width="1.5"/>
+</svg>

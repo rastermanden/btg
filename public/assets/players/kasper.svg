@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" role="img" aria-label="Kasper as Axl Rose">
+  <rect width="200" height="220" fill="#ffe9d1"/>
+  <!-- Shoulders / leather jacket -->
+  <path d="M10 220 L10 198 Q45 170 80 168 L120 168 Q155 170 190 198 L190 220 Z" fill="#2b2016" stroke="#0e1a33" stroke-width="3"/>
+  <!-- Shirt opening -->
+  <path d="M80 168 L100 200 L120 168 Z" fill="#fff" stroke="#0e1a33" stroke-width="2.5"/>
+  <!-- Neck -->
+  <rect x="86" y="148" width="28" height="22" fill="#ecc6a0" stroke="#0e1a33" stroke-width="3"/>
+  <!-- Long hair — back layer falls behind shoulders -->
+  <path d="M40 118 Q28 170 48 210 L68 210 Q58 178 60 140 Z" fill="#c0411c" stroke="#0e1a33" stroke-width="3"/>
+  <path d="M160 118 Q172 170 152 210 L132 210 Q142 178 140 140 Z" fill="#c0411c" stroke="#0e1a33" stroke-width="3"/>
+  <!-- Face -->
+  <ellipse cx="100" cy="118" rx="40" ry="46" fill="#ecc6a0" stroke="#0e1a33" stroke-width="3"/>
+  <!-- Long flowing front hair -->
+  <path d="M56 88 Q60 60 90 54 Q100 42 120 52 Q150 58 148 94 Q140 80 130 80 L130 110 Q118 102 112 90 Q105 100 96 90 Q88 102 78 110 L72 92 Q66 82 58 92 Z" fill="#c0411c" stroke="#0e1a33" stroke-width="2.5"/>
+  <!-- Red bandana -->
+  <path d="M54 86 L146 86 L148 96 Q100 90 52 96 Z" fill="#c61d6e" stroke="#0e1a33" stroke-width="2.5"/>
+  <path d="M58 88 L62 94 M72 88 L76 94 M86 88 L90 94 M110 88 L114 94 M124 88 L128 94 M138 88 L142 94" stroke="#fff" stroke-width="1.5"/>
+  <!-- Bandana tail -->
+  <path d="M146 92 L168 100 L160 108 L150 100 Z" fill="#c61d6e" stroke="#0e1a33" stroke-width="2"/>
+  <!-- Eyes (intense squint) -->
+  <path d="M74 118 Q82 114 90 118" fill="none" stroke="#0e1a33" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M110 118 Q118 114 126 118" fill="none" stroke="#0e1a33" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="82" cy="120" r="1.8" fill="#0e1a33"/>
+  <circle cx="118" cy="120" r="1.8" fill="#0e1a33"/>
+  <!-- Nose -->
+  <path d="M100 124 L96 138 Q100 142 104 138" fill="none" stroke="#0e1a33" stroke-width="2" stroke-linecap="round"/>
+  <!-- Open singing mouth -->
+  <ellipse cx="100" cy="150" rx="8" ry="6" fill="#0e1a33"/>
+  <ellipse cx="100" cy="151" rx="5" ry="3" fill="#c61d6e"/>
+  <!-- Stubble -->
+  <g fill="#0e1a33" opacity=".5">
+    <circle cx="76" cy="148" r=".9"/><circle cx="82" cy="152" r=".9"/><circle cx="88" cy="156" r=".9"/>
+    <circle cx="112" cy="156" r=".9"/><circle cx="118" cy="152" r=".9"/><circle cx="124" cy="148" r=".9"/>
+    <circle cx="100" cy="160" r=".9"/><circle cx="94" cy="158" r=".9"/><circle cx="106" cy="158" r=".9"/>
+  </g>
+</svg>
