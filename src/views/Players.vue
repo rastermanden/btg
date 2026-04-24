@@ -3,6 +3,7 @@ import { BTG_DATA } from '../data.js'
 
 const pad2 = (n) => String(n).padStart(2, '0')
 const shortsYear = (y) => String(y).slice(2)
+const imgUrl = (path) => `${import.meta.env.BASE_URL}${path}`
 </script>
 
 <template>
@@ -22,6 +23,13 @@ const shortsYear = (y) => String(y).slice(2)
         :class="{ shorts: !!p.shorts }"
       >
         <div class="no">{{ pad2(p.no) }}</div>
+        <div class="portrait">
+          <img
+            v-if="p.img"
+            :src="imgUrl(p.img)"
+            :alt="`${p.first} ${p.last} — cartoon portrait as ${p.persona}`"
+          />
+        </div>
         <div class="nation">{{ p.nation }} · {{ p.club }}</div>
         <div class="name">{{ p.first }} {{ p.last }}</div>
         <div class="nick">“{{ p.nick }}”</div>
