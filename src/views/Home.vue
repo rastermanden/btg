@@ -29,6 +29,30 @@ const scorecard = [
     <button :class="{ active: heroLayout === 'countdown' }" @click="heroLayout = 'countdown'">Countdown</button>
   </div>
 
+  <section class="B-champion" aria-label="MMXXVI Champion">
+    <div class="B-section-head" style="margin-bottom: 28px;">
+      <div>
+        <h2 style="color: var(--B-navy);">CHAMPION<br><span style="color: var(--B-pink);">MMXXVI.</span></h2>
+        <div class="sub" style="color: var(--B-navy);">Fifteenth edition. Fourth pair of pink for the Dylan of Klint.</div>
+      </div>
+      <div class="n" style="background: var(--B-navy); color: var(--B-gold);">§ 00</div>
+    </div>
+    <div class="grid">
+      <div class="stamp">CHAMPION<span>MMXXVI</span></div>
+      <div>
+        <div class="nick">“The Drop Shot”</div>
+        <div class="bigname">MIKKEL<br><span class="pink">SLICEFINGER</span></div>
+        <p class="copy">Closed out the Golden Gummiben with a feathered lob on match point, scraped the baseline, lifted the shorts for the fourth time in fifteen editions. Kasper has been seen staring at the 18th green since Friday.</p>
+        <div class="chips">
+          <span class="chip pink">−8 on the card</span>
+          <span class="chip">6-4 · 6-3</span>
+          <span class="chip pink">20.0 BTG pts</span>
+          <span class="chip">Pair N°4</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="B-section">
     <div class="B-section-head">
       <div>
@@ -48,12 +72,12 @@ const scorecard = [
 
   <section class="B-feature">
     <div class="scroll">
-      <span>DRIVE IT.</span><span class="pink">RALLY IT.</span><span>WEAR THE SHORTS.</span>
+      <span>MIKKEL WINS.</span><span class="pink">DROP-SHOT.</span><span>WEAR THE SHORTS.</span>
       <span style="color: var(--B-turf);">★</span>
-      <span>DRIVE IT.</span><span class="pink">RALLY IT.</span>
-      <span>DRIVE IT.</span><span class="pink">RALLY IT.</span><span>WEAR THE SHORTS.</span>
+      <span>MIKKEL WINS.</span><span class="pink">MMXXVI.</span>
+      <span>MIKKEL WINS.</span><span class="pink">DROP-SHOT.</span><span>WEAR THE SHORTS.</span>
       <span style="color: var(--B-turf);">★</span>
-      <span>DRIVE IT.</span><span class="pink">RALLY IT.</span>
+      <span>MIKKEL WINS.</span><span class="pink">MMXXVI.</span>
     </div>
   </section>
 

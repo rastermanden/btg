@@ -11,11 +11,11 @@ const items = [
 ]
 
 const tickerItems = [
-  'Pink Shorts MMXXVI',
-  'Five Men. One Trophy.',
-  'Drive it · Rally it',
-  'Est. 2011 · Klint DK',
-  'Cry “Gummiben!”',
+  'Champion MMXXVI · Mikkel Slicefinger',
+  'Drop-shot on match point',
+  'Pair N°4 · Pink & Correct',
+  'Dylan on the 18th fairway',
+  'Kasper: still staring at the green',
 ]
 
 const isOpen = ref(false)
