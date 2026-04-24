@@ -17,28 +17,30 @@ const wins = [
       </div>
       <div class="n">§ HISTORY</div>
     </div>
-    <table class="B-table">
-      <thead>
-        <tr>
-          <th>YEAR</th>
-          <th>CHAMPION</th>
-          <th>SCORE</th>
-          <th>VENUE</th>
-          <th>NOTE</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(h, i) in BTG_DATA.history" :key="h.year">
-          <td class="year">{{ h.year }}</td>
-          <td class="champ">{{ h.champ }}</td>
-          <td class="mono-cell">{{ h.score }}</td>
-          <td>{{ h.venue }}</td>
-          <td class="note-cell">{{ h.note }}</td>
-          <td><span v-if="i === 0" class="shorts-tag">Current</span></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="B-table-wrap">
+      <table class="B-table">
+        <thead>
+          <tr>
+            <th>YEAR</th>
+            <th>CHAMPION</th>
+            <th>SCORE</th>
+            <th>VENUE</th>
+            <th>NOTE</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(h, i) in BTG_DATA.history" :key="h.year">
+            <td class="year">{{ h.year }}</td>
+            <td class="champ">{{ h.champ }}</td>
+            <td class="mono-cell">{{ h.score }}</td>
+            <td>{{ h.venue }}</td>
+            <td class="note-cell">{{ h.note }}</td>
+            <td><span v-if="i === 0" class="shorts-tag">Current</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="B-wins">
       <div v-for="[n, w] in wins" :key="n" class="p-card">
