@@ -2,8 +2,8 @@
 import { BTG_DATA } from '../data.js'
 
 const wins = [
+  ['MIKKEL SLICEFINGER', 3],
   ['TROELS SMASHMOSE', 3],
-  ['MIKKEL SLICEFINGER', 2],
   ['KASPER GUMMIBEN', 2],
 ]
 </script>
@@ -13,7 +13,7 @@ const wins = [
     <div class="B-section-head">
       <div>
         <h2>THE PINK SHORTS<br>REGISTER.</h2>
-        <div class="sub">Nine editions. Four men. One trophy.</div>
+        <div class="sub">Ten editions. Four men. One trophy.</div>
       </div>
       <div class="n">§ HISTORY</div>
     </div>

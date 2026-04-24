@@ -14,7 +14,7 @@ export const BTG_DATA = {
   prize: 'The Pink Shorts',
 
   players: [
-    { no: 1, first: 'Mikkel', last: 'Slicefinger', nick: 'The Drop Shot', club: 'Klint GC', nation: 'DK', hcp: 4.2, serve: 188, wins: 3, shorts: 2024, img: 'assets/players/mikkel.svg', persona: 'Bob Dylan' },
+    { no: 1, first: 'Mikkel', last: 'Slicefinger', nick: 'The Drop Shot', club: 'Klint GC', nation: 'DK', hcp: 4.2, serve: 188, wins: 4, shorts: 2026, img: 'assets/players/mikkel.svg', persona: 'Bob Dylan' },
     { no: 2, first: 'Kasper', last: 'Gummiben', nick: 'Bogey King', club: 'Klint GC', nation: 'DK', hcp: 2.8, serve: 201, wins: 4, shorts: 2025, img: 'assets/players/kasper.svg', persona: 'Axl Rose' },
     { no: 3, first: 'Uffe', last: 'Dobbelbogey', nick: 'Cold Fore', club: 'Klint GC', nation: 'DK', hcp: 6.1, serve: 176, wins: 2, shorts: 2022, img: 'assets/players/uffe.svg', persona: 'Harald Blåtand' },
     { no: 4, first: 'Troels', last: 'Smashmose', nick: 'Deuce Daddy', club: 'Klint GC', nation: 'DK', hcp: 1.4, serve: 192, wins: 5, shorts: 2023, img: 'assets/players/troels.svg', persona: 'Dolph Lundgren' },
@@ -22,6 +22,7 @@ export const BTG_DATA = {
   ],
 
   history: [
+    { year: 2026, champ: 'Mikkel Slicefinger', score: '−8 / 6-4 6-3', venue: 'Klint', note: 'Drop-shot lob on match point; hummed Dylan between every hole' },
     { year: 2025, champ: 'Kasper Gummiben', score: '−7 / 6-4 6-3', venue: 'Klint', note: 'Sudden-death chip-in on 18; renamed himself after the trophy' },
     { year: 2024, champ: 'Mikkel Slicefinger', score: '−9 / 7-6 6-4', venue: 'Klint', note: 'Sliced into the clubhouse window, still won' },
     { year: 2023, champ: 'Troels Smashmose', score: '−5 / 6-2 6-2', venue: 'Klint', note: 'Forehand so loud it scared the seagulls' },

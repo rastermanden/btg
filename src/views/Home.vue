@@ -11,10 +11,10 @@ const pillars = [
 ]
 
 const scorecard = [
-  ['STROKE (18H)', '−7'],
+  ['STROKE (18H)', '−8'],
   ['SET 1', '6-4'],
   ['SET 2', '6-3'],
-  ['BTG POINTS', '19.0'],
+  ['BTG POINTS', '20.0'],
   ['AQUAVITS', '0 DECLINED'],
 ]
 </script>
@@ -60,21 +60,21 @@ const scorecard = [
   <section class="B-section alt">
     <div class="B-section-head">
       <div>
-        <h2 style="color: var(--B-gold);">SHORTS-HOLDER<br>OF MMXXV.</h2>
+        <h2 style="color: var(--B-gold);">SHORTS-HOLDER<br>OF MMXXVI.</h2>
         <div class="sub">Currently unbeaten. Currently pink.</div>
       </div>
       <div class="n" style="background: var(--B-pink); color: #fff;">§ 02</div>
     </div>
     <div class="B-shorts-holder">
       <div>
-        <div class="nick">“Bogey King”</div>
-        <div class="bigname">KASPER<br><span class="pink">GUMMIBEN</span></div>
+        <div class="nick">“The Drop Shot”</div>
+        <div class="bigname">MIKKEL<br><span class="pink">SLICEFINGER</span></div>
         <p class="copy">
-          Sealed the 2025 edition on a sudden-death chip-in from 42 metres off the 18th. Has since legally changed his surname to match the trophy. The shorts fit. The marriage did not survive.
+          Took the 2026 edition with a feathered drop-shot lob on match point, his fourth pair of pink shorts in fifteen editions. Hummed Dylan between every hole. The shorts are said to fit, but only just.
         </p>
       </div>
       <div class="card-bg">
-        <div class="label">FINAL SCORECARD · MMXXV</div>
+        <div class="label">FINAL SCORECARD · MMXXVI</div>
         <table>
           <tbody>
             <tr v-for="[k, v] in scorecard" :key="k">
