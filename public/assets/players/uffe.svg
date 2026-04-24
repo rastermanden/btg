@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" role="img" aria-label="Uffe as Harald Bluetooth">
+  <rect width="200" height="220" fill="#ffe9d1"/>
+  <!-- Fur cloak shoulders -->
+  <path d="M6 220 L6 196 Q42 168 80 166 L120 166 Q158 168 194 196 L194 220 Z" fill="#6b4a2a" stroke="#0e1a33" stroke-width="3"/>
+  <g fill="#3a2718" opacity=".6">
+    <circle cx="30" cy="200" r="5"/><circle cx="46" cy="208" r="4"/><circle cx="60" cy="196" r="4"/>
+    <circle cx="140" cy="196" r="4"/><circle cx="154" cy="208" r="4"/><circle cx="170" cy="200" r="5"/>
+  </g>
+  <!-- Tunic V -->
+  <path d="M82 166 L100 188 L118 166 Z" fill="#1c3b6b" stroke="#0e1a33" stroke-width="2.5"/>
+  <!-- Neck -->
+  <rect x="86" y="150" width="28" height="20" fill="#f0c99a" stroke="#0e1a33" stroke-width="3"/>
+  <!-- Long braided beard -->
+  <path d="M68 142 Q62 180 82 210 L118 210 Q138 180 132 142 Q116 158 100 156 Q84 158 68 142 Z" fill="#d6b06a" stroke="#0e1a33" stroke-width="3"/>
+  <!-- Beard braid lines -->
+  <g stroke="#0e1a33" stroke-width="1.5" fill="none">
+    <path d="M82 170 Q86 180 82 194"/>
+    <path d="M96 176 Q98 190 96 206"/>
+    <path d="M104 176 Q102 190 104 206"/>
+    <path d="M118 170 Q114 180 118 194"/>
+  </g>
+  <!-- Moustache -->
+  <path d="M70 140 Q78 150 100 148 Q122 150 130 140 Q118 136 100 138 Q82 136 70 140 Z" fill="#d6b06a" stroke="#0e1a33" stroke-width="2"/>
+  <!-- Face -->
+  <ellipse cx="100" cy="120" rx="38" ry="42" fill="#f0c99a" stroke="#0e1a33" stroke-width="3"/>
+  <!-- Hair framing -->
+  <path d="M64 100 Q62 78 80 70 L120 70 Q138 78 136 100 Q136 86 120 82 L80 82 Q64 86 64 100 Z" fill="#d6b06a" stroke="#0e1a33" stroke-width="2.5"/>
+  <!-- Viking crown/helmet base -->
+  <path d="M58 80 L142 80 L138 58 L122 66 L110 50 L100 62 L90 50 L78 66 L62 58 Z" fill="#d8a63a" stroke="#0e1a33" stroke-width="3"/>
+  <!-- Crown jewels -->
+  <circle cx="100" cy="66" r="3.5" fill="#c61d6e" stroke="#0e1a33" stroke-width="1.5"/>
+  <circle cx="78" cy="70" r="2.5" fill="#2b7a3e" stroke="#0e1a33" stroke-width="1"/>
+  <circle cx="122" cy="70" r="2.5" fill="#2b7a3e" stroke="#0e1a33" stroke-width="1"/>
+  <!-- Eyes -->
+  <circle cx="86" cy="118" r="3" fill="#0e1a33"/>
+  <circle cx="114" cy="118" r="3" fill="#0e1a33"/>
+  <!-- Heavy brows -->
+  <path d="M76 108 L96 112" stroke="#6b4a2a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M104 112 L124 108" stroke="#6b4a2a" stroke-width="4" stroke-linecap="round"/>
+  <!-- Nose -->
+  <path d="M100 122 L94 136 Q100 140 106 136" fill="none" stroke="#0e1a33" stroke-width="2" stroke-linecap="round"/>
+  <!-- Blue tooth hint (tiny smile showing one blue tooth) -->
+  <path d="M92 152 Q100 158 108 152" fill="#fff" stroke="#0e1a33" stroke-width="1.5"/>
+  <rect x="98" y="152" width="3.5" height="5" fill="#1c5fb8" stroke="#0e1a33" stroke-width="0.8"/>
+</svg>
