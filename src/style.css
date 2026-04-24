@@ -1,19 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Oswald:wght@400;500;600;700&family=Alfa+Slab+One&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;700&family=Bowlby+One&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
+
 :root {
-  font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.5;
-  color: #222;
-  background: #fafafa;
+  --B-bg: #fff3e6;
+  --B-cream: #ffe9d1;
+  --B-ink: #0e1a33;
+  --B-pink: #ef3a8a;
+  --B-pink-deep: #c61d6e;
+  --B-gold: #d8a63a;
+  --B-turf: #2b7a3e;
+  --B-navy: #0e1a33;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-body {
+html, body {
   margin: 0;
+  background: var(--B-bg);
+  color: var(--B-ink);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+#app { min-height: 100vh; display: flex; flex-direction: column; }
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+
+.B { display: flex; flex-direction: column; flex: 1; }
+.B-main { flex: 1; }
+
+/* ========= NAV ========= */
+.B-nav {
+  background: var(--B-pink); color: #fff;
+  padding: 0 28px;
+  display: grid; grid-template-columns: auto 1fr auto;
+  align-items: center; height: 62px;
+  border-bottom: 5px solid var(--B-navy);
+  position: relative;
+}
+.B-nav::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: -10px; height: 5px;
+  background: var(--B-gold);
+}
+.B-nav .logo { display: flex; align-items: center; gap: 12px; font-family: 'Bowlby One'; font-size: 24px; letter-spacing: .02em; text-transform: uppercase; color: #fff; }
+.B-nav .logo .crest { width: 34px; height: 34px; background: var(--B-navy); border-radius: 50%; display: grid; place-items: center; color: var(--B-gold); font-size: 13px; font-family: 'Bowlby One'; border: 2px solid var(--B-gold); }
+.B-nav nav { display: flex; gap: 22px; justify-content: center; font-family: 'Oswald'; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.B-nav nav a { color: #fff; padding: 4px 8px; cursor: pointer; border-radius: 3px; }
+.B-nav nav a.active { background: var(--B-navy); color: var(--B-gold); }
+.B-nav nav a:hover:not(.active) { background: rgba(255,255,255,.15); }
+.B-nav .right { display: flex; gap: 8px; align-items: center; }
+.B-nav .cta-s { background: var(--B-navy); color: var(--B-gold); font-family: 'Oswald'; font-size: 11px; letter-spacing: .14em; padding: 8px 14px; text-transform: uppercase; border: 0; cursor: pointer; }
+
+/* ticker */
+.B-ticker {
+  background: var(--B-navy); color: var(--B-gold);
+  padding: 16px 28px 6px;
+  font-family: 'Bowlby One'; font-size: 13px; letter-spacing: .1em; text-transform: uppercase;
+  display: flex; gap: 30px; overflow: hidden; white-space: nowrap;
+}
+.B-ticker .track { display: inline-flex; gap: 30px; animation: B-ticker-scroll 28s linear infinite; }
+.B-ticker span { display: inline-flex; align-items: center; gap: 10px; }
+.B-ticker span::before { content: '★'; color: var(--B-pink); }
+@keyframes B-ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ========= FOOTER ========= */
+.B-footer {
+  background: var(--B-navy); color: #fff; padding: 40px 44px 20px;
+  border-top: 6px solid var(--B-pink);
+  position: relative;
+}
+.B-footer::before { content:''; position: absolute; top:-6px; left:0; right:0; height: 6px; background: linear-gradient(90deg, var(--B-pink) 0 25%, var(--B-gold) 25% 50%, var(--B-turf) 50% 75%, var(--B-pink) 75% 100%); }
+.B-footer .f-top { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 36px; }
+.B-footer .big-mark { font-family: 'Bowlby One'; font-size: 88px; color: var(--B-gold); line-height: .9; letter-spacing: -.01em; }
+.B-footer .big-mark small { font-family: 'Playfair Display'; font-style: italic; font-weight: 700; color: var(--B-pink); font-size: 28px; display: block; margin-top: -6px; }
+.B-footer .mono-line { font-family: 'JetBrains Mono'; font-size: 11px; color: rgba(255,255,255,.6); letter-spacing: .1em; text-transform: uppercase; margin-top: 14px; }
+.B-footer h5 { margin: 0 0 12px; font-family: 'Bowlby One'; font-size: 13px; letter-spacing: .04em; color: var(--B-pink); text-transform: uppercase; }
+.B-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 7px; font-size: 12px; }
+.B-footer .fine { border-top: 1px dashed rgba(255,255,255,.2); padding-top: 14px; margin-top: 20px; display: flex; justify-content: space-between; font-family: 'JetBrains Mono'; font-size: 10px; color: rgba(255,255,255,.55); text-transform: uppercase; letter-spacing: .1em; }
+
+/* ========= HERO — POSTER-FORWARD ========= */
+.B-hero { background: var(--B-turf); position: relative; overflow: hidden; }
+.B-hero.layout-poster { display: grid; grid-template-columns: 1fr 1fr; min-height: 700px; }
+.B-hero.layout-poster .poster-col {
+  position: relative; display: grid; place-items: center; padding: 30px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(239,58,138,.3), transparent 50%),
+    repeating-linear-gradient(135deg, rgba(0,0,0,.04) 0 2px, transparent 2px 14px),
+    var(--B-turf);
+}
+.B-hero.layout-poster .poster-col img { max-height: 640px; max-width: 100%; transform: rotate(-2deg); box-shadow: 0 24px 60px rgba(0,0,0,.4), 0 0 0 8px #fff, 0 0 0 9px rgba(0,0,0,.1); }
+.B-hero.layout-poster .sticker {
+  position: absolute; background: var(--B-pink); color: #fff; font-family: 'Bowlby One';
+  font-size: 14px; letter-spacing: .06em; padding: 12px 16px; text-transform: uppercase;
+  border: 3px solid #fff; transform: rotate(-8deg); text-align: center; line-height: 1.1;
+  box-shadow: 0 6px 0 rgba(0,0,0,.2);
+}
+.B-hero.layout-poster .sticker.s1 { top: 28px; right: 40px; transform: rotate(8deg); }
+.B-hero.layout-poster .sticker.s2 { bottom: 50px; left: 20px; }
+
+.B-hero .copy-col { padding: 54px 46px; background: var(--B-bg); position: relative; display: flex; flex-direction: column; justify-content: space-between; }
+.B-hero .copy-col::before {
+  content: ''; position: absolute; inset: 0; opacity: .5;
+  background: radial-gradient(circle at 20% 90%, rgba(239,58,138,.12), transparent 40%);
+  pointer-events: none;
+}
+.B-hero .copy-col > * { position: relative; z-index: 1; }
+.B-hero .eyebrow { font-family: 'Bowlby One'; font-size: 13px; color: var(--B-pink); letter-spacing: .08em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 12px; }
+.B-hero .eyebrow::before { content: ''; width: 14px; height: 14px; background: var(--B-gold); border-radius: 50%; }
+.B-hero h1 { font-family: 'Bowlby One'; font-size: 64px; line-height: 1.1; margin: 22px 0 0; letter-spacing: -.02em; color: var(--B-navy); }
+.B-hero h1 .pink { color: var(--B-pink); }
+.B-hero h1 .gold { color: var(--B-gold); -webkit-text-stroke: 1px var(--B-navy); }
+.B-hero h1 .script { display: block; font-family: 'Playfair Display'; font-style: italic; font-weight: 900; color: var(--B-gold); font-size: 48px; letter-spacing: -.01em; line-height: 1.2; margin: 16px 0 48px; transform: rotate(-1deg); }
+.B-hero .lead { font-family: 'Playfair Display'; font-style: italic; font-size: 20px; color: var(--B-navy); max-width: 440px; line-height: 1.4; margin-top: 22px; }
+.B-hero .meta-row { display: flex; gap: 24px; align-items: center; margin-top: 26px; font-family: 'Oswald'; letter-spacing: .14em; font-size: 12px; text-transform: uppercase; color: var(--B-navy); font-weight: 600; }
+.B-hero .meta-row .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--B-pink); }
+.B-hero .ctas { display: flex; gap: 12px; margin-top: 28px; }
+.B-hero .btn { font-family: 'Bowlby One'; font-size: 14px; padding: 16px 22px; letter-spacing: .04em; text-transform: uppercase; border: 3px solid var(--B-navy); cursor: pointer; position: relative; box-shadow: 5px 5px 0 var(--B-navy); transition: transform .15s, box-shadow .15s; }
+.B-hero .btn:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--B-navy); }
+.B-hero .btn.pink { background: var(--B-pink); color: #fff; }
+.B-hero .btn.cream { background: var(--B-gold); color: var(--B-navy); }
+
+/* split variant */
+.B-hero.layout-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 580px; }
+.B-hero.layout-split .h-left { background: var(--B-turf); padding: 48px; color: #fff; position: relative; overflow: hidden; }
+.B-hero.layout-split .h-right { background: var(--B-pink); padding: 48px; color: #fff; position: relative; overflow: hidden; }
+.B-hero.layout-split .h-left::after,
+.B-hero.layout-split .h-right::after {
+  content: ''; position: absolute; inset: 0;
+  background: repeating-linear-gradient(45deg, rgba(255,255,255,.04) 0 2px, transparent 2px 18px);
+  pointer-events: none;
+}
+.B-hero.layout-split .h-left > *,
+.B-hero.layout-split .h-right > * { position: relative; z-index: 2; }
+.B-hero.layout-split .super { font-family: 'Bowlby One'; font-size: 120px; line-height: .85; }
+.B-hero.layout-split .sub { font-family: 'Playfair Display'; font-style: italic; font-size: 24px; margin-top: 10px; }
+.B-hero.layout-split .center-seam {
+  position: absolute; left: 50%; top: 0; bottom: 0; width: 6px; background: var(--B-gold); transform: translateX(-50%); z-index: 3;
+}
+.B-hero.layout-split .middle-title {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-4deg);
+  background: var(--B-bg); border: 5px solid var(--B-navy); padding: 24px 34px; z-index: 4;
+  font-family: 'Bowlby One'; font-size: 44px; color: var(--B-navy); text-align: center; line-height: 1; box-shadow: 8px 8px 0 var(--B-gold);
+}
+.B-hero.layout-split .middle-title .gold-script { font-family: 'Playfair Display'; font-style: italic; font-weight: 900; color: var(--B-pink); font-size: 28px; display: block; margin-top: 4px; text-transform: none; }
+
+/* countdown variant */
+.B-hero.layout-countdown { background: var(--B-navy); color: #fff; padding: 56px 48px; }
+.B-hero.layout-countdown .cd-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+.B-hero.layout-countdown .eyebrow { color: var(--B-gold); }
+.B-hero.layout-countdown .eyebrow::before { display: none; }
+.B-hero.layout-countdown h1 { font-family: 'Bowlby One'; font-size: 96px; line-height: .88; margin: 22px 0 0; color: #fff; }
+.B-hero.layout-countdown h1 .pink { color: var(--B-pink); }
+.B-hero.layout-countdown .tee { font-family: 'Playfair Display'; font-style: italic; font-size: 22px; color: var(--B-gold); margin-top: 18px; }
+.B-hero.layout-countdown .cd-boxes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.B-hero.layout-countdown .cd-box { background: var(--B-pink); border: 3px solid var(--B-gold); padding: 18px 10px; text-align: center; }
+.B-hero.layout-countdown .cd-box .n { font-family: 'Bowlby One'; font-size: 46px; color: #fff; }
+.B-hero.layout-countdown .cd-box .l { font-family: 'Oswald'; font-size: 10px; letter-spacing: .2em; color: #fff; margin-top: 4px; }
+
+/* ========= SECTIONS ========= */
+.B-section { padding: 64px 48px; }
+.B-section.alt { background: var(--B-navy); color: #fff; }
+.B-section.pink { background: var(--B-pink); color: #fff; }
+.B-section-head { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; margin-bottom: 32px; }
+.B-section-head h2 { font-family: 'Bowlby One'; font-size: 64px; margin: 0; line-height: .9; letter-spacing: -.01em; text-transform: uppercase; }
+.B-section-head .sub { font-family: 'Playfair Display'; font-style: italic; font-size: 22px; color: var(--B-pink); margin-top: 8px; }
+.B-section.alt .B-section-head .sub { color: var(--B-gold); }
+.B-section-head .n { font-family: 'Bowlby One'; font-size: 12px; letter-spacing: .1em; color: var(--B-pink); background: #fff; padding: 6px 10px; text-transform: uppercase; }
+
+/* pillars */
+.B-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.p-card { background: var(--B-cream); border: 3px solid var(--B-navy); padding: 24px; position: relative; box-shadow: 6px 6px 0 var(--B-pink); color: var(--B-ink); }
+.p-card h3 { font-family: 'Bowlby One'; font-size: 26px; margin: 14px 0 12px; color: var(--B-navy); text-transform: uppercase; line-height: 1; }
+.p-card p { margin: 0; font-size: 12.5px; line-height: 1.6; }
+.p-card .ix { font-family: 'Bowlby One'; font-size: 12px; letter-spacing: .08em; color: var(--B-pink); text-transform: uppercase; }
+
+/* ticker-feature */
+.B-feature { padding: 50px 48px; background: var(--B-gold); color: var(--B-navy); border-top: 5px solid var(--B-navy); border-bottom: 5px solid var(--B-navy); overflow: hidden; position: relative; }
+.B-feature .scroll { display: flex; gap: 40px; font-family: 'Bowlby One'; font-size: 78px; line-height: 1; letter-spacing: -.01em; text-transform: uppercase; white-space: nowrap; animation: B-feature-scroll 22s linear infinite; }
+.B-feature .scroll span.pink { color: var(--B-pink); -webkit-text-stroke: 2px var(--B-navy); }
+@keyframes B-feature-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* shorts-holder hero block (Home §02) */
+.B-shorts-holder { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.B-shorts-holder .nick { font-family: 'Playfair Display'; font-style: italic; font-size: 24px; color: var(--B-pink); }
+.B-shorts-holder .bigname { font-family: 'Bowlby One'; font-size: 72px; line-height: .9; margin: 10px 0; color: #fff; text-transform: uppercase; }
+.B-shorts-holder .bigname .pink { color: var(--B-pink); }
+.B-shorts-holder .copy { color: rgba(255,255,255,.8); max-width: 440px; font-size: 14px; line-height: 1.55; }
+.B-shorts-holder .card-bg { background: var(--B-pink); border: 5px solid var(--B-gold); padding: 30px; position: relative; box-shadow: 10px 10px 0 var(--B-gold); }
+.B-shorts-holder .card-bg .label { font-family: 'Bowlby One'; font-size: 14px; letter-spacing: .06em; color: var(--B-navy); text-transform: uppercase; }
+.B-shorts-holder .card-bg table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 16px; }
+.B-shorts-holder .card-bg td { padding: 10px 0; border-bottom: 2px dashed var(--B-navy); }
+.B-shorts-holder .card-bg td.k { font-family: 'Oswald'; font-size: 11px; letter-spacing: .14em; color: var(--B-navy); }
+.B-shorts-holder .card-bg td.v { font-family: 'Bowlby One'; font-size: 20px; color: #fff; text-align: right; }
+
+/* about */
+.B-about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; }
+.B-about-grid .lead-quote { font-family: 'Playfair Display'; font-style: italic; font-size: 22px; line-height: 1.4; color: var(--B-navy); }
+.B-about-grid .body { font-size: 14px; line-height: 1.6; margin-top: 16px; }
+.B-council { background: var(--B-navy); color: #fff; padding: 28px; border: 3px solid var(--B-navy); box-shadow: 8px 8px 0 var(--B-pink); }
+.B-council h3 { margin: 0; font-family: 'Bowlby One'; color: var(--B-gold); font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
+.B-council .rows { display: grid; gap: 14px; margin-top: 16px; }
+.B-council .row { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding-bottom: 12px; border-bottom: 2px dashed rgba(255,255,255,.15); }
+.B-council .row:last-child { border-bottom: 0; padding-bottom: 0; }
+.B-council .row .role { font-family: 'Oswald'; font-size: 10px; letter-spacing: .14em; color: var(--B-pink); text-transform: uppercase; align-self: center; }
+.B-council .row .name { font-family: 'Bowlby One'; font-size: 16px; }
+
+.B-facilities { margin-top: 50px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.B-facilities .p-card h3 { font-size: 22px; }
+
+/* table */
+.B-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; background: var(--B-cream); border: 3px solid var(--B-navy); }
+.B-table thead th { text-align: left; font-family: 'Bowlby One'; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #fff; background: var(--B-navy); padding: 12px 14px; }
+.B-table tbody td { padding: 16px 14px; border-bottom: 2px solid var(--B-navy); vertical-align: middle; }
+.B-table tbody tr:last-child td { border-bottom: 0; }
+.B-table tbody tr:nth-child(even) { background: rgba(239,58,138,.06); }
+.B-table .year { font-family: 'Bowlby One'; font-size: 22px; color: var(--B-pink); }
+.B-table .champ { font-weight: 700; }
+.B-table .mono-cell { font-family: 'JetBrains Mono'; font-size: 12px; }
+.B-table .note-cell { max-width: 320px; }
+.B-table .shorts-tag { display: inline-block; font-family: 'Bowlby One'; font-size: 10px; padding: 4px 8px; background: var(--B-pink); color: #fff; text-transform: uppercase; border: 2px solid var(--B-navy); }
+
+.B-wins { margin-top: 30px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.B-wins .p-card h3 { font-size: 20px; }
+.B-wins .bars { display: flex; gap: 6px; margin-top: 10px; align-items: center; }
+.B-wins .bar { width: 22px; height: 16px; background: var(--B-pink); border: 2px solid var(--B-navy); border-radius: 2px; }
+.B-wins .mult { font-family: 'Bowlby One'; font-size: 16px; color: var(--B-pink); margin-left: 6px; }
+
+/* players */
+.B-players { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.B-players .card { background: var(--B-cream); border: 3px solid var(--B-navy); padding: 22px; position: relative; box-shadow: 6px 6px 0 var(--B-gold); }
+.B-players .card.shorts { box-shadow: 6px 6px 0 var(--B-pink); }
+.B-players .card .no { position: absolute; top: 12px; right: 18px; font-family: 'Bowlby One'; font-size: 50px; color: var(--B-gold); -webkit-text-stroke: 2px var(--B-navy); line-height: 1; }
+.B-players .card.shorts .no { color: var(--B-pink); }
+.B-players .card .nation { font-family: 'Bowlby One'; font-size: 11px; letter-spacing: .08em; color: var(--B-pink); }
+.B-players .card .name { font-family: 'Bowlby One'; font-size: 22px; line-height: 1.05; margin: 10px 0 4px; max-width: 72%; text-transform: uppercase; }
+.B-players .card .nick { font-family: 'Playfair Display'; font-style: italic; color: var(--B-navy); font-size: 15px; font-weight: 700; }
+.B-players .card .stats { display: grid; grid-template-columns: 1fr 1fr 1fr; margin-top: 18px; border-top: 2px dashed var(--B-navy); padding-top: 12px; gap: 6px; }
+.B-players .card .stats .k { font-family: 'Oswald'; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--B-pink-deep); }
+.B-players .card .stats .v { font-family: 'Bowlby One'; font-size: 18px; color: var(--B-navy); }
+.B-players .card .shorts-tag {
+  margin-top: 14px; font-family: 'Bowlby One'; font-size: 10px;
+  background: var(--B-pink); color: #fff; display: inline-block;
+  padding: 5px 9px; border: 2px solid var(--B-navy); text-transform: uppercase;
+}
+
+/* rules — charter style */
+.B-rules-grid { display: grid; grid-template-columns: 1fr 240px; gap: 30px; align-items: start; }
+.B-rules { display: grid; gap: 0; border: 3px solid var(--B-navy); background: var(--B-cream); }
+.B-rules .article { padding: 24px 26px; border-bottom: 2px dashed var(--B-navy); }
+.B-rules .article:last-child { border-bottom: 0; }
+.B-rules .article-head { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center; margin-bottom: 16px; }
+.B-rules .article-head .roman { background: var(--B-pink); color: #fff; padding: 8px 16px; font-family: 'Bowlby One'; font-size: 32px; letter-spacing: .04em; border: 3px solid var(--B-navy); box-shadow: 4px 4px 0 var(--B-navy); }
+.B-rules .article-head .title { font-family: 'Bowlby One'; font-size: 28px; text-transform: uppercase; color: var(--B-navy); }
+.B-rules .sec { display: grid; grid-template-columns: 56px 1fr; gap: 16px; padding: 6px 0; }
+.B-rules .sec .sn { font-family: 'Bowlby One'; font-size: 14px; color: var(--B-pink); letter-spacing: .04em; }
+.B-rules .sec p { margin: 0; font-size: 13.5px; line-height: 1.6; }
+
+.B-rules-aside { position: sticky; top: 20px; align-self: start; }
+.B-rules-aside .index { background: var(--B-pink); color: #fff; border: 3px solid var(--B-navy); padding: 20px; box-shadow: 6px 6px 0 var(--B-navy); }
+.B-rules-aside .index h4 { margin: 0 0 10px; font-family: 'Bowlby One'; font-size: 14px; text-transform: uppercase; }
+.B-rules-aside .index ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.B-rules-aside .index li { display: grid; grid-template-columns: 36px 1fr; gap: 8px; font-family: 'Oswald'; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; align-items: center; }
+.B-rules-aside .index li .roman { font-family: 'Bowlby One'; font-size: 13px; color: var(--B-gold); }
+.B-rules-aside .quote { margin-top: 14px; background: var(--B-gold); border: 3px solid var(--B-navy); padding: 16px; box-shadow: 6px 6px 0 var(--B-navy); font-family: 'Playfair Display'; font-style: italic; font-size: 13px; line-height: 1.45; color: var(--B-navy); }
+.B-rules-aside .quote .attrib { margin-top: 8px; font-style: normal; font-family: 'Oswald'; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--B-pink-deep); }
+
+/* tweaks toggle (hero layout switcher, homepage) */
+.B-tweak { display: inline-flex; gap: 6px; padding: 8px 10px; background: #fff; border: 3px solid var(--B-navy); box-shadow: 4px 4px 0 var(--B-navy); margin: 16px 48px 0; font-family: 'Oswald'; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; align-items: center; }
+.B-tweak .label { color: var(--B-pink); font-family: 'Bowlby One'; letter-spacing: .08em; margin-right: 4px; }
+.B-tweak button { background: transparent; border: 0; font: inherit; color: var(--B-navy); cursor: pointer; padding: 4px 8px; }
+.B-tweak button.active { background: var(--B-navy); color: var(--B-gold); }
+
+/* responsive */
+@media (max-width: 960px) {
+  .B-nav { grid-template-columns: auto 1fr; padding: 0 16px; }
+  .B-nav nav { display: none; }
+  .B-hero.layout-poster,
+  .B-hero.layout-split,
+  .B-hero.layout-countdown .cd-grid { grid-template-columns: 1fr; }
+  .B-hero.layout-split .super { font-size: 72px; }
+  .B-hero.layout-split .middle-title { font-size: 28px; }
+  .B-hero.layout-countdown h1 { font-size: 56px; }
+  .B-section { padding: 40px 20px; }
+  .B-section-head h2 { font-size: 40px; }
+  .B-pillars, .B-players, .B-facilities, .B-wins,
+  .B-shorts-holder, .B-about-grid, .B-rules-grid,
+  .B-footer .f-top { grid-template-columns: 1fr; }
+  .B-feature .scroll { font-size: 48px; }
+  .B-footer .big-mark { font-size: 56px; }
 }
